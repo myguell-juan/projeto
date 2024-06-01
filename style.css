@@ -1,111 +1,201 @@
-
-/* ESTILO GERAL */
 *{
-    margin: 0;
+    font-family: poppins, sans-serif;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    margin: 0;
 }
 
-body{
-    background-color: rgb(255, 255, 255);
-    height: 100vh;
-}
-
-.interface{
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-.flex{
-    display: flex;
-}
-
-.btn-contato button{
-    padding: 10px 40px;
-    font-size: 18px;
-    font-weight: 600;
-    background-color: #DF9006;
-    border: 0;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: .2s;
-}
-
-/* ESTILO DO CABEÇALHO */
-
-.header{
-    padding: 40px 4%;
-}
-
-.header > .interface{
+header{
+    background-color: #2176FF;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.header a{
-    color: #b5b0b0;
+.logo{
+    margin-left: 5%;
+}
+
+.logo img{
+    width: 60px;
+}
+
+.slogan{
+    font-family: "Bebas Neue", sans-serif;
+    display: flex;
+    font-size: 170%;
+    margin-left: -48%;
+}
+
+.slogan:hover{
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#menumobile{
+    display: none;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 5%;
+}
+
+.navbar ul{
+    list-style: none;
+}
+
+.navbar ul li{
+}
+
+.navbar ul li a{
     text-decoration: none;
-    display: inline-block;
-    transition: .2s;
+    margin-left: 20px;
 }
 
-.header a:hover{
-    color: #000;
-    transform: scale(1.05);
+.navbar ul li a:hover{
+    font-size: 110%;
+    color: #ffffff;
 }
 
-.header nav ul {
-    list-style-type: none;
-}
-
-.header nav ul li{
-    display: inline-block;
-    padding: 0 40px;
-}
-
-.btn-contato button:hover{
-    box-shadow: 0px 0px 8px #DF9006;
-    transform: scale(1.05);
-}
-
-/* ESTILO DO TOPO DO SITE */
-section .topo-do-site{
-    padding: 40px 4%;
-}
-
-section .topo-do-site .flex{
+.Sobre{
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 90px;
+    content: "";
+    background-color: #df9006;
+    height: 90vh;
 }
 
-.topo-do-site h1{
-    color: #000;
-    font-size: 42px;
-    line-height: 40px;
+.Sobre h1{
+    font-size: 180%;
+    margin: 0 8%;
 }
 
-.topo-do-site .txt-topo-site h1 .span{
-    color: #DF9006;
+ h1 span{
+    color: #2176FF;
 }
 
-.topo-do-site .txt-topo-site p{
-    color: #000;
-    margin: 40px 0;
+.p-sobre{
+    margin: 1% 8%;
+    font-size: 18px;
 }
 
-.topo-do-site .img-topo-site img{
-    position: relative;
-    animation: flutuar 2s ease-in-out infinite alternate;
+.fotodele{
+    background-color: #fff;
+    height: 90vh;
+    width: 130%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
 }
 
-@keyframes flutuar{
-    0%{
-        top: 0;
+.fotodele img{
+    width: 600px;
+    height: 100%;
+}
+
+.contato{
+    margin-left: 8%;
+    background-color: #2176FF;
+    border-radius: 16px;
+    width: 10%;
+}
+
+button:hover{
+    background-color: #ffffff;
+    cursor: pointer;
+    transform: scale(1.10);
+}
+
+.ONU{
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+}
+
+.fotods{
+    display: flex;
+    animation: esquerda 15s infinite;
+}
+
+.fotods img{
+    height: 50vh;
+    width: 208vh;
+}
+
+@media screen and (max-width: 1020px) {
+
+    #menumobile{
+        display: flex;
+        border-radius: 16px;
+        width: 14%;
+        justify-content: center;
+        background-color: #df9006;
+        margin-right: -35%;
     }
-    100%{
-        top: 30px;
+
+    #menumobile:hover{
+        background-color: #fff;
+    }
+
+    .slogan{
+        margin-left: -30%;
+    }
+
+    #menu{
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0;
+        z-index: 1000;
+        background-color: #fff;
+    }
+
+    #nav.active #menu{
+        display: block;
+    }
+
+    #nav ul li a{
+        display: block;
+    }
+
+    #nav ul li a:hover{
+        background-color: #df9006;
+        color: #fff;
+    }
+
+    .Sobre{
+        display: block;
+        flex-direction: column-reverse;
+        height: 98vh;
+    }
+
+    .contato{
+        width: 17%;
+        margin: 4% 8%;
+    }
+
+    .ONU{
+        margin-top: 80vh;
+    }
+
+    .fotods img{
+        width: 55vh;
+        height: 30vh;
+    }
+}    
+
+/* ANIMAÇÕES */
+
+@keyframes esquerda {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
     }
 }
