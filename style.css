@@ -170,8 +170,17 @@ button:hover{
 
     .Sobre{
         display: block;
+        width: 100%;
         flex-direction: column-reverse;
-        height: 98vh;
+    }
+
+    .fotodele img{
+        width: 110%;
+        height: 111%;
+    }
+
+    .txtsobre{
+        height: 100vh;
     }
 
     .contato{
@@ -187,6 +196,7 @@ button:hover{
         width: 55vh;
         height: 30vh;
     }
+
 }    
 
 /* ANIMAÇÕES */
