@@ -47,18 +47,18 @@ header{
     list-style: none;
 }
 
-.navbar ul li{
-}
-
 .navbar ul li a{
     text-decoration: none;
     margin-left: 20px;
+    color: #000;
 }
 
 .navbar ul li a:hover{
     font-size: 110%;
     color: #ffffff;
 }
+
+/* __SOBRE__ */
 
 .Sobre{
     display: flex;
@@ -110,6 +110,8 @@ button:hover{
     transform: scale(1.10);
 }
 
+/* __ONU__ */
+
 .ONU{
     overflow: hidden;
     display: flex;
@@ -125,6 +127,75 @@ button:hover{
     height: 50vh;
     width: 208vh;
 }
+ .logoonu{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: direita 5s infinite;
+    display: flex;
+    background-color: #000000;
+} 
+
+.onulogo img{
+    width: 100%;
+    height: 50vh;
+}
+
+/* __SERVIÇO__ */
+
+.serviço{
+    height: 100vh;
+    width: 100%;
+    background-color: #2176FF;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+}
+
+.serviço h1:hover{
+    cursor: pointer;
+    color:#fff
+}
+
+/* __CONTATO__ */
+
+.contatos{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8e8e8
+    ;
+}
+
+.contatos-inp{
+    content: "";
+    background-color: #fff;
+    width: 190px;
+    height: 254px;
+    display: grid;
+    place-items: center;
+    border-radius: 30px;
+    box-shadow: 15px 15px 30px #bebebe,
+    -15px -15px 30px #ffffff;
+}
+
+.contatos-inp input{
+    display: block;
+    border-radius: 20px;
+}
+
+.contatos-inp textarea{
+    display: block;
+    border-radius: 20px;
+}
+
+.contatos-inp label{
+    display: grid;
+    place-items: start !important;
+}
+
+/* __TAMANHOS DE TELA__ */
 
 @media screen and (max-width: 1020px) {
 
@@ -175,8 +246,9 @@ button:hover{
     }
 
     .fotodele img{
-        width: 110%;
+        width: 100%;
         height: 111%;
+        margin-left: -15%;
     }
 
     .txtsobre{
@@ -193,13 +265,13 @@ button:hover{
     }
 
     .fotods img{
-        width: 55vh;
+        width: 65vh;
         height: 30vh;
     }
 
 }    
 
-/* ANIMAÇÕES */
+/* __ANIMAÇÕES__ */
 
 @keyframes esquerda {
     from{
@@ -207,5 +279,13 @@ button:hover{
     }
     to{
         transform: translateX(-100%);
+    }
+}
+
+@keyframes direita {
+    from{
+        transform: translateX(calc(-400%));
+    }to{
+        transform:translate(100%)
     }
 }
